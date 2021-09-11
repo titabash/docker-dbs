@@ -8,3 +8,6 @@ remove:
 	@if [ -n "`docker network inspect $(NETWORK_NAME) | grep \"\\"Containers\\": {}\"`" ]; then docker network rm $(NETWORK_NAME); fi
 stop:
 	sh ./tools/stop.sh
+restart:
+	sh ./tools/remove.sh
+	sh ./tools/start.sh
