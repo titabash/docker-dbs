@@ -1,2 +1,2 @@
-tmux kill-session -t docker_dbs
+tmux kill-session -t $(basename `git rev-parse --show-toplevel`)
 docker-compose stop
